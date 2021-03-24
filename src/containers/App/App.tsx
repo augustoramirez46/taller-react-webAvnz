@@ -1,6 +1,7 @@
 import React from 'react';
 import { PriceSum } from '../../components/PriceSum/PriceSum';
 import './App.css'
+import { HashRouter } from 'react-router-dom';
 
 const testPedals = [
     {
@@ -27,10 +28,17 @@ const testPedals = [
 
 export const App = () => {
 
+
+
     return (<main>
 
-        <PriceSum name='1' price='2'></PriceSum>
+        <HashRouter>
 
+            <PriceSum name='1' price='2'></PriceSum>
+
+        </HashRouter>
     </main>
+
+
     );
 }
