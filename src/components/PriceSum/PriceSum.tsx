@@ -1,18 +1,18 @@
 import * as React from 'react';
-import './PriceSum.css'
+import { PedalInfo } from '../../utils/pedalInfo';
+
 
 interface PriceSumProps {
-    name: string;
-    price: string;
-
-
+    list: PedalInfo[],
 }
 
-export const PriceSum: React.FC<PriceSumProps> = ({ price }) => {
-
+export const PriceSum: React.FC<PriceSumProps> = ({ list }) => {
+    // const [pedalPrice, setpedalPrice] = React.useState(testPedals);
+    console.log(list)
     return (<div className='PriceSum'>'
         <h1>Total</h1>
-        <li></li>
+
+        <li>{list[1].name}</li>
 
     </div>);
 }
