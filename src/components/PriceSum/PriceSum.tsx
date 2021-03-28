@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { PedalInfo } from '../../utils/pedalInfo';
+import { PriceListItem } from '../PriceListItem/PriceListItem';
 
 
 interface PriceSumProps {
@@ -12,7 +13,14 @@ export const PriceSum: React.FC<PriceSumProps> = ({ list }) => {
     return (<div className='PriceSum'>'
         <h1>Total</h1>
 
-        <li>{list[1].name}</li>
+        {list.map(({ id, name, price }) => {
+            return <PriceListItem
+                key={id}
+                name={name}
+                price={price}
+            >
+            </PriceListItem>;
+        })}
 
     </div>);
 }
