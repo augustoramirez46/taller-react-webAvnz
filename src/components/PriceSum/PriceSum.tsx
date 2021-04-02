@@ -10,7 +10,7 @@ interface PriceSumProps {
 export const PriceSum: React.FC<PriceSumProps> = ({ list }) => {
     // const [pedalPrice, setpedalPrice] = React.useState(testPedals);
     console.log(list)
-    return (<div className='PriceSum'>'
+    return (<div className='PriceSum'>
         <h1>Total</h1>
 
         {list.map(({ id, name, price }) => {

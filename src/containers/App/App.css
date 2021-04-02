@@ -26,6 +26,8 @@ main {
       -ms-flex-direction: row;
           flex-direction: row;
   padding: 2em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .PriceSum {
