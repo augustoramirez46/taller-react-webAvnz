@@ -1,6 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Dela Gothic One';
+}
+
+p {
+  font-family: 'Open Sans';
 }
 
 html,
@@ -25,16 +37,32 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 2em;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 4em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .PriceSum {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: blanchedalmond;
   height: 80%;
-  width: 14%;
+  width: 15%;
   padding: 1em 1em;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.PriceSum__title {
+  color: #4d5252;
 }
 
 .playAudioButton {
@@ -55,7 +83,7 @@ main {
           flex-direction: row;
   background-color: #4e5555;
   height: 80%;
-  width: 80%;
+  width: 83%;
   padding: 3em;
   -webkit-box-pack: bottom;
       -ms-flex-pack: bottom;
@@ -77,11 +105,38 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.PriceListItem__title {
+  color: #857575;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.PriceListItem__price {
+  margin-left: auto;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.PriceListItem__delete {
+  background-color: hotpink;
+  margin-left: 20px;
+  width: 15px;
+  height: 15px;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+.Browser {
+  width: 83%;
+  background-color: honeydew;
+  height: 15%;
 }
 /*# sourceMappingURL=App.css.map */

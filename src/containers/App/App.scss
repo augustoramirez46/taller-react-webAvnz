@@ -1,5 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 * {
     box-sizing: border-box;
+
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Dela Gothic One';
+}
+
+p {
+    font-family: 'Open Sans';
 }
 
 html,
@@ -21,12 +35,14 @@ main {
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 
-    padding: 2em;
-    justify-content: space-around;
+    padding: 4em;
+    justify-content: space-between;
 }
 
 @import '../../components/PriceSum/PriceSum';
 @import '../../components/PlayAudioButton/PlayAudioButton';
 @import '../../components/PedalBoard/PedalBoard';
-@import '../../components/PriceListItem/PriceListItem'
+@import '../../components/PriceListItem/PriceListItem';
+@import '../../components/Browser/Browser';

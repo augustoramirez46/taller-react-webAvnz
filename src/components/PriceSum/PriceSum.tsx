@@ -11,7 +11,7 @@ export const PriceSum: React.FC<PriceSumProps> = ({ list }) => {
     // const [pedalPrice, setpedalPrice] = React.useState(testPedals);
     console.log(list)
     return (<div className='PriceSum'>
-        <h1>Total</h1>
+        <h1 className='PriceSum__title'>Total</h1>
 
         {list.map(({ id, name, price }) => {
             return <PriceListItem

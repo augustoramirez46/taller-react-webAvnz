@@ -1,8 +1,15 @@
 .PriceSum {
+    display: flex;
+    flex-direction: column;
     background-color: blanchedalmond;
     height: 80%;
-    width: 14%;
+    width: 15%;
 
     padding: 1em 1em;
+    align-content: center;
+
+    &__title {
+        color: rgb(77, 82, 82)
+    }
 
 }
