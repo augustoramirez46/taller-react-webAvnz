@@ -7,6 +7,7 @@ import * as Tone from 'tone';
 // import { PlayAudio } from '../../components/PlayAudioButton/PlayAudio';
 import { PedalBoard } from '../../components/PedalBoard/PedalBoard';
 import { Browser } from '../../components/Browser/Browser';
+import { AudioPlayer } from '../../components/AudioPlayer/AudioPlayer';
 
 
 const testPedals = [
@@ -57,8 +58,6 @@ const testPedals = [
     },
 ];
 
-let playing = false;
-
 const sound1 = new Tone.Player({
     url: `${process.env.PUBLIC_URL}/resources/sounds/guitarPhrase.wav`,
     loop: true,
@@ -67,63 +66,22 @@ const sound1 = new Tone.Player({
 })
 
 export const App = () => {
-
-
-    //const synth = new Tone.Synth(); /*.toDestination();*/
-    //const dist = new Tone.Distortion(15).toDestination();
-    // const now = Tone.now();
-    //synth.connect(dist);
-
-
-
-    const dist = new Tone.Distortion(1).toDestination();
-    sound1.connect(dist);
-
-    const handleOnPlayPause = () => {
-
-
-        switch (playing) {
-            case false:
-                //const now = Tone.now();
-
-                sound1.start(0, 1);
-
-
-                //synth.triggerAttack("C4", now);
-                //synth.triggerAttack("G4", now + .3);
-                //synth.triggerAttack("E4", now + .5);
-
-                playing = true;
-                break;
-
-            case true:
-                //synth.triggerRelease();
-
-                sound1.stop();
-
-                playing = false;
-                break;
-        }
-
-        console.log(playing);
-
-
-    }
+    const [isPlaying, setIsPlaying] = React.useState(false);
 
     const intermediatePlayPause = () => {
-        handleOnPlayPause();
+        const newState = !isPlaying;
+        setIsPlaying(newState);
     }
 
     return (<main>
 
         <HashRouter basename={process.env.PUBLIC_URL}>
 
-
             <Route path="/home" component={Home} />
-
-            <PedalBoard onPlayPause={intermediatePlayPause} />
+            <AudioPlayer sound1={sound1} isPlaying={isPlaying} />
+            <PedalBoard onClickPP={intermediatePlayPause} />
             <PriceSum list={testPedals} ></PriceSum>
-            <Browser />
+            <Browser pedalStock={testPedals} />
 
         </HashRouter>
 

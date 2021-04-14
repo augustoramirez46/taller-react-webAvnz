@@ -2,13 +2,13 @@ import * as React from 'react';
 
 
 interface PriceListItemProps {
-    key: number,
+
     name: string,
     price: number,
     onClickDelete?: () => void;
 }
 
-export const PriceListItem: React.FC<PriceListItemProps> = ({ key, name, price, onClickDelete }) => {
+export const PriceListItem: React.FC<PriceListItemProps> = ({ name, price, onClickDelete }) => {
 
     return <div className={`PriceListItem`}>
         <h3 className={`PriceListItem__title`}>{name}</h3>

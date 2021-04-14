@@ -138,5 +138,23 @@ main {
   width: 83%;
   background-color: honeydew;
   height: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Pedal {
+  margin: .3em 1em;
+  padding: .5em;
+  width: 100px;
+  background-color: blue;
+}
+
+.Pedal__title {
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */

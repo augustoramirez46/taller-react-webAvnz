@@ -1,0 +1,11 @@
+.Pedal {
+
+    margin: .3em 1em;
+    padding: .5em;
+    width: 100px;
+    background-color: blue;
+
+    &__title {
+        color: white;
+    }
+}
