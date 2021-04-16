@@ -151,7 +151,7 @@ main {
   margin: .3em 1em;
   padding: .5em;
   width: 100px;
-  background-color: blue;
+  background-color: rgba(228, 182, 32, 0.897);
 }
 
 .Pedal__title {

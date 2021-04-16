@@ -9,6 +9,7 @@ interface AudioPlayerProps {
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({ sound1, isPlaying }) => {
 
+    // Escucha cambios de la variable, no cambia nada
     React.useEffect(() => {
         const dist = new Tone.Distortion(1).toDestination();
         sound1.connect(dist);

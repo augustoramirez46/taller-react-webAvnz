@@ -8,13 +8,14 @@ import * as Tone from 'tone';
 import { PedalBoard } from '../../components/PedalBoard/PedalBoard';
 import { Browser } from '../../components/Browser/Browser';
 import { AudioPlayer } from '../../components/AudioPlayer/AudioPlayer';
+import { PedalContext } from '../../utils/PedalContext';
 
 
 const testPedals = [
     {
         id: 0,
         name: 'siracha',
-        price: 35
+        price: 35,
     },
     {
         id: 1,
@@ -73,16 +74,19 @@ export const App = () => {
         setIsPlaying(newState);
     }
 
+    const intermediateDragStart = () => {
+        console.log('drag starting');
+    }
     return (<main>
 
         <HashRouter basename={process.env.PUBLIC_URL}>
-
-            <Route path="/home" component={Home} />
-            <AudioPlayer sound1={sound1} isPlaying={isPlaying} />
-            <PedalBoard onClickPP={intermediatePlayPause} />
-            <PriceSum list={testPedals} ></PriceSum>
-            <Browser pedalStock={testPedals} />
-
+            <PedalContext.Provider value={{ list: testPedals }}>
+                <Route path="/home" component={Home} />
+                <AudioPlayer sound1={sound1} isPlaying={isPlaying} />
+                <PedalBoard onClickPP={intermediatePlayPause} />
+                <PriceSum list={testPedals} ></PriceSum>
+                <Browser pedalStock={testPedals} pedalDragStart={intermediateDragStart} />
+            </PedalContext.Provider>
         </HashRouter>
 
     </main>
