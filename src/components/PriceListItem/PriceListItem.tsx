@@ -5,7 +5,7 @@ interface PriceListItemProps {
 
     name: string,
     price: number,
-    onClickDelete?: () => void;
+    onClickDelete: () => void;
 }
 
 export const PriceListItem: React.FC<PriceListItemProps> = ({ name, price, onClickDelete }) => {

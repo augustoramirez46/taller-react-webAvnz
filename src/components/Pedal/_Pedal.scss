@@ -1,10 +1,16 @@
 .Pedal {
+    $red: random(256)-1;
+    $green: random(256)-1;
+    $blue: random(256)-1;
+
+
+    background-color: rgb($red, $green, $blue);
 
     margin: .3em 1em;
     padding: .5em;
     width: 130px;
     height: 250px;
-    background-color: rgba(228, 182, 32, 0.897);
+
 
     :hover {
         cursor: pointer;

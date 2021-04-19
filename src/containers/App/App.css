@@ -156,11 +156,11 @@ main {
 }
 
 .Pedal {
+  background-color: #9619ab;
   margin: .3em 1em;
   padding: .5em;
   width: 130px;
   height: 250px;
-  background-color: rgba(228, 182, 32, 0.897);
 }
 
 .Pedal :hover {

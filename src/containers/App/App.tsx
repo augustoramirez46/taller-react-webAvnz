@@ -111,6 +111,20 @@ export const App = () => {
 
     }
 
+    const [pedalsSum, setPedalsSum] = React.useState(0);
+    React.useEffect(() => {
+        if (pedalsOnBoard.length === 0) {
+            setPedalsSum(0);
+            return;
+        }
+
+        var sum = 0;
+        pedalsOnBoard.forEach(({ price }) => {
+            sum = sum + price
+        })
+        setPedalsSum(sum);
+    }, [pedalsOnBoard]);
+
     return (<main>
 
         <HashRouter basename={process.env.PUBLIC_URL}>
@@ -119,7 +133,7 @@ export const App = () => {
                 <Route path="/home" component={Home} />
                 <AudioPlayer sound1={sound1} isPlaying={isPlaying} />
                 <PedalBoard onClickPP={intermediatePlayPause} />
-                <PriceSum  ></PriceSum>
+                <PriceSum priceSum={pedalsSum} ></PriceSum>
                 <Browser />
 
             </PedalContext.Provider>
