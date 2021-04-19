@@ -1,27 +1,25 @@
 import * as React from 'react';
-import { PedalInfo } from '../../utils/pedalInfo';
+import { PedalContext } from '../../utils/PedalContext';
 import { Pedal } from '../Pedal/Pedal';
 
 interface BrowserProps {
-    pedalStock: PedalInfo[],
-    pedalDragStart: () => void,
 
 }
 
-export const Browser: React.FC<BrowserProps> = ({ pedalStock, pedalDragStart }) => {
+export const Browser: React.FC<BrowserProps> = ({ }) => {
 
-    React.useEffect(() => {
-
-    }, []);
-
-    const [selectedPedal, SetSelectedPedal] = React.useState(pedalStock);
+    const { pedalsOnStock, handleToBoard } = React.useContext(PedalContext);
 
 
     return <div className='Browser'>
-        {pedalStock.map(({ id, name, price }) => {
+        {pedalsOnStock.map(({ id, name, price }) => {
+            const IntermediatePedalDragEnd = () => {
+                handleToBoard(id);
+            }
             return (
                 <Pedal
-                    pedalDragStart={pedalDragStart}
+                    onBoard={false}
+                    onClickPedal={IntermediatePedalDragEnd}
                     key={id}
                     id={id}
                     name={name}

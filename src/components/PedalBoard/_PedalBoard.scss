@@ -9,7 +9,17 @@
     justify-content: bottom;
 
     &__main {
+
+        padding: 3em;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
         background-color: darkcyan;
-        flex-grow: 1;
+
+        width: 100%;
+
+
     }
 }

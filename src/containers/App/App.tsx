@@ -4,11 +4,12 @@ import './App.css'
 import { HashRouter, Route } from 'react-router-dom';
 import { Home } from '../Home/Home';
 import * as Tone from 'tone';
-// import { PlayAudio } from '../../components/PlayAudioButton/PlayAudio';
 import { PedalBoard } from '../../components/PedalBoard/PedalBoard';
 import { Browser } from '../../components/Browser/Browser';
 import { AudioPlayer } from '../../components/AudioPlayer/AudioPlayer';
 import { PedalContext } from '../../utils/PedalContext';
+import { PedalInfo } from '../../utils/pedalInfo';
+
 
 
 const testPedals = [
@@ -59,6 +60,8 @@ const testPedals = [
     },
 ];
 
+const pedalOnBoard = new Array<PedalInfo>();
+
 const sound1 = new Tone.Player({
     url: `${process.env.PUBLIC_URL}/resources/sounds/guitarPhrase.wav`,
     loop: true,
@@ -74,18 +77,51 @@ export const App = () => {
         setIsPlaying(newState);
     }
 
-    const intermediateDragStart = () => {
-        console.log('drag starting');
+    const [pedalsStocked, setPedalsStocked] = React.useState(testPedals);
+
+    const handleToStock = (id: number) => {
+        const copyStock = pedalsStocked.slice();
+        const copyBoard = pedalsOnBoard.slice();
+        const index = copyBoard.findIndex((elem) => {
+            return elem.id === id;
+        });
+
+        copyStock.push(copyBoard[index]);
+        copyBoard.splice(index, 1);
+
+        setPedalsStocked(copyStock);
+        setPedalsOnBoard(copyBoard);
+
     }
+
+    const [pedalsOnBoard, setPedalsOnBoard] = React.useState(pedalOnBoard);
+
+    const handleToBoard = (id: number) => {
+        const copyStock = pedalsStocked.slice();
+        const copyBoard = pedalsOnBoard.slice();
+        const index = copyStock.findIndex((elem) => {
+            return elem.id === id;
+        });
+
+        copyBoard.push(copyStock[index]);
+        copyStock.splice(index, 1);
+
+        setPedalsOnBoard(copyBoard);
+        setPedalsStocked(copyStock);
+
+    }
+
     return (<main>
 
         <HashRouter basename={process.env.PUBLIC_URL}>
-            <PedalContext.Provider value={{ list: testPedals }}>
+            <PedalContext.Provider value={{ pedalsOnStock: pedalsStocked, pedalsOnBoard: pedalsOnBoard, handleToStock: handleToStock, handleToBoard: handleToBoard }}>
+
                 <Route path="/home" component={Home} />
                 <AudioPlayer sound1={sound1} isPlaying={isPlaying} />
                 <PedalBoard onClickPP={intermediatePlayPause} />
-                <PriceSum list={testPedals} ></PriceSum>
-                <Browser pedalStock={testPedals} pedalDragStart={intermediateDragStart} />
+                <PriceSum  ></PriceSum>
+                <Browser />
+
             </PedalContext.Provider>
         </HashRouter>
 

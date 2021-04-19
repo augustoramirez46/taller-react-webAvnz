@@ -39,7 +39,7 @@ main {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 4em;
+  padding: 2em;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -91,10 +91,18 @@ main {
 }
 
 .PedalBoard__main {
+  padding: 3em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background-color: darkcyan;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  width: 100%;
 }
 
 .PriceListItem {
@@ -137,7 +145,7 @@ main {
 .Browser {
   width: 83%;
   background-color: honeydew;
-  height: 15%;
+  height: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,11 +158,20 @@ main {
 .Pedal {
   margin: .3em 1em;
   padding: .5em;
-  width: 100px;
+  width: 130px;
+  height: 250px;
   background-color: rgba(228, 182, 32, 0.897);
+}
+
+.Pedal :hover {
+  cursor: pointer;
 }
 
 .Pedal__title {
   color: white;
+}
+
+.Pedal--onBoard {
+  margin: 3em 6em;
 }
 /*# sourceMappingURL=App.css.map */

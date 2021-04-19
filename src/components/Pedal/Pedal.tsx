@@ -1,21 +1,25 @@
 import * as React from 'react';
 
+import ITEM_TYPE from '../../utils/Types';
+
+
+
 interface PedalProps {
     id: number,
     name: string,
     price: number,
-    pedalDragStart: () => void;
+    onBoard: boolean,
+    onClickPedal: () => void;
 }
 
-export const Pedal: React.FC<PedalProps> = ({ name, id, pedalDragStart }) => {
+export const Pedal: React.FC<PedalProps> = ({ name, id, onClickPedal, onBoard }) => {
 
-    const pedalDragEnd = () => {
-        console.log('me dropiaron pedal');
-        console.log(id);
-    }
+    return (
+        <div className={`Pedal ${onBoard ? `Pedal--onBoard` : ""}`} onClick={onClickPedal}>
+            <p className={`Pedal__id`}>{id}</p>
+            <p className={`Pedal__title`}>{name}</p>
+        </div>
 
-    return <div className={`Pedal`} draggable onDragStart={console.log} onDrag={console.log} onDragOver={console.log} onDragEnd={pedalDragEnd}>
-        <p className={`Pedal__id`}>{id}</p>
-        <p className={`Pedal__title`}>{name}</p>
-    </div>
+    )
+
 }

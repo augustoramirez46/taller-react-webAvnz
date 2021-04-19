@@ -2,10 +2,19 @@
 
     margin: .3em 1em;
     padding: .5em;
-    width: 100px;
+    width: 130px;
+    height: 250px;
     background-color: rgba(228, 182, 32, 0.897);
+
+    :hover {
+        cursor: pointer;
+    }
 
     &__title {
         color: white;
+    }
+
+    &--onBoard {
+        margin: 3em 6em;
     }
 }
