@@ -10,7 +10,7 @@ import { AudioPlayer } from '../../components/AudioPlayer/AudioPlayer';
 import { PedalContext } from '../../utils/PedalContext';
 import { PedalInfo } from '../../utils/pedalInfo';
 
-
+const PUBLIC_URL = process.env.PUBLIC_URL;
 
 const testPedals = [
     {
@@ -60,10 +60,16 @@ const testPedals = [
     },
 ];
 
+const mainBg = {
+    backgroundImage: `url(${PUBLIC_URL}/resources/images/wood_background.png)`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover"
+}
+
 const pedalOnBoard = new Array<PedalInfo>();
 
 const sound1 = new Tone.Player({
-    url: `${process.env.PUBLIC_URL}/resources/sounds/guitarPhrase.wav`,
+    url: `${PUBLIC_URL}/resources/sounds/guitarPhrase.wav`,
     loop: true,
     fadeIn: .2,
     fadeOut: .9,
@@ -125,7 +131,7 @@ export const App = () => {
         setPedalsSum(sum);
     }, [pedalsOnBoard]);
 
-    return (<main>
+    return (<main style={mainBg}>
 
         <HashRouter basename={process.env.PUBLIC_URL}>
             <PedalContext.Provider value={{ pedalsOnStock: pedalsStocked, pedalsOnBoard: pedalsOnBoard, handleToStock: handleToStock, handleToBoard: handleToBoard }}>

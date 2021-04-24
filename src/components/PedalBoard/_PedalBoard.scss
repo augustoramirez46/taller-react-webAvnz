@@ -1,7 +1,7 @@
 .PedalBoard {
     display: flex;
     flex-direction: row;
-    background-color: rgb(78, 85, 85);
+
     height: 80%;
     width: 83%;
 
@@ -16,7 +16,7 @@
         flex-direction: row;
         flex-wrap: wrap;
 
-        background-color: darkcyan;
+        background-color: rgba(207, 238, 238, 0.096);
 
         width: 100%;
 

@@ -6,7 +6,7 @@ interface BrowserProps {
 
 }
 
-export const Browser: React.FC<BrowserProps> = ({ }) => {
+export const Browser: React.FC<BrowserProps> = () => {
 
     const { pedalsOnStock, handleToBoard } = React.useContext(PedalContext);
 

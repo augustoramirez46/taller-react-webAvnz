@@ -3,14 +3,12 @@
     $green: random(256)-1;
     $blue: random(256)-1;
 
-
     background-color: rgb($red, $green, $blue);
 
     margin: .3em 1em;
     padding: .5em;
     width: 130px;
     height: 250px;
-
 
     :hover {
         cursor: pointer;
