@@ -64,7 +64,7 @@ main {
 }
 
 .PriceSum__title {
-  color: #4d5252;
+  color: #dbdbdb;
 }
 
 .playAudioButton {
@@ -115,32 +115,31 @@ main {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 80%;
-  margin: 0;
-  padding: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin: 0 0 1.5em 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-bottom: 0.05em dashed rgba(255, 255, 255, 0.26);
 }
 
 .PriceListItem__title {
-  color: #857575;
-  margin-top: 0px;
-  margin-bottom: 25px;
+  color: whitesmoke;
+  margin: 0px;
 }
 
 .PriceListItem__price {
+  color: whitesmoke;
+  margin: 0px;
   margin-left: auto;
-  margin-top: 0px;
-  margin-bottom: 25px;
 }
 
 .PriceListItem__delete {
+  display: none;
   background-color: hotpink;
   margin-left: 20px;
   width: 15px;
   height: 15px;
   margin-top: 0px;
-  margin-bottom: 25px;
 }
 
 .Browser {
@@ -161,7 +160,7 @@ main {
 }
 
 .Pedal {
-  background-color: #717fe3;
+  background-color: #912f6c;
   margin: .3em 1em;
   padding: .5em;
   width: 130px;

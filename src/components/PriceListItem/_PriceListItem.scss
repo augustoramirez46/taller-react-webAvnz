@@ -2,32 +2,33 @@
     display: flex;
     flex-direction: row;
     width: 80%;
+    margin: 0 0 1.5em 0;
 
+    justify-content: flex-end;
 
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-
+    border-bottom: .05em dashed rgba(255, 255, 255, 0.26);
 
     &__title {
-        color: rgb(133, 117, 117);
-        margin-top: 0px;
-        margin-bottom: 25px;
+        color: rgb(245, 245, 245);
+        margin: 0px;
+
     }
 
     &__price {
+        color: rgb(245, 245, 245);
+        margin: 0px;
         margin-left: auto;
-        margin-top: 0px;
-        margin-bottom: 25px;
+
     }
 
     &__delete {
+        display: none;
         background-color: hotpink;
         margin-left: 20px;
         width: 15px;
         height: 15px;
         margin-top: 0px;
-        margin-bottom: 25px;
+
 
     }
 }
