@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/taller-react-webAvnz/static/css/main.a9a505a4.chunk.css",
-    "main.js": "/taller-react-webAvnz/static/js/main.09d80195.chunk.js",
-    "main.js.map": "/taller-react-webAvnz/static/js/main.09d80195.chunk.js.map",
+    "main.css": "/taller-react-webAvnz/static/css/main.959ad007.chunk.css",
+    "main.js": "/taller-react-webAvnz/static/js/main.1eaaad00.chunk.js",
+    "main.js.map": "/taller-react-webAvnz/static/js/main.1eaaad00.chunk.js.map",
     "runtime-main.js": "/taller-react-webAvnz/static/js/runtime-main.78ad289e.js",
     "runtime-main.js.map": "/taller-react-webAvnz/static/js/runtime-main.78ad289e.js.map",
-    "static/js/2.84101c1b.chunk.js": "/taller-react-webAvnz/static/js/2.84101c1b.chunk.js",
-    "static/js/2.84101c1b.chunk.js.map": "/taller-react-webAvnz/static/js/2.84101c1b.chunk.js.map",
+    "static/js/2.54fdeefd.chunk.js": "/taller-react-webAvnz/static/js/2.54fdeefd.chunk.js",
+    "static/js/2.54fdeefd.chunk.js.map": "/taller-react-webAvnz/static/js/2.54fdeefd.chunk.js.map",
     "index.html": "/taller-react-webAvnz/index.html",
-    "static/css/main.a9a505a4.chunk.css.map": "/taller-react-webAvnz/static/css/main.a9a505a4.chunk.css.map",
-    "static/js/2.84101c1b.chunk.js.LICENSE.txt": "/taller-react-webAvnz/static/js/2.84101c1b.chunk.js.LICENSE.txt"
+    "static/css/main.959ad007.chunk.css.map": "/taller-react-webAvnz/static/css/main.959ad007.chunk.css.map",
+    "static/js/2.54fdeefd.chunk.js.LICENSE.txt": "/taller-react-webAvnz/static/js/2.54fdeefd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.78ad289e.js",
-    "static/js/2.84101c1b.chunk.js",
-    "static/css/main.a9a505a4.chunk.css",
-    "static/js/main.09d80195.chunk.js"
+    "static/js/2.54fdeefd.chunk.js",
+    "static/css/main.959ad007.chunk.css",
+    "static/js/main.1eaaad00.chunk.js"
   ]
 }
