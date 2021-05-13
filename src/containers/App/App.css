@@ -80,6 +80,9 @@ main {
   height: 115px;
   -webkit-filter: drop-shadow(0 0 0.75rem #1b1b1b);
           filter: drop-shadow(0 0 0.75rem #1b1b1b);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
   position: relative;
   top: 79%;
   margin: 1em 1em;
