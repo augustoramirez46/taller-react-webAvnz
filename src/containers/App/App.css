@@ -67,10 +67,21 @@ main {
   color: #dbdbdb;
 }
 
+.PriceSum__total {
+  color: whitesmoke;
+  margin: 0px;
+  margin-left: auto;
+  margin-right: 20%;
+}
+
 .playAudioButton {
-  background-color: aliceblue;
-  width: 80px;
-  height: 80px;
+  background-color: #ffd30d;
+  width: 115px;
+  height: 115px;
+  -webkit-filter: drop-shadow(0 0 0.75rem #1b1b1b);
+          filter: drop-shadow(0 0 0.75rem #1b1b1b);
+  position: relative;
+  top: 79%;
   margin: 1em 1em;
   border-radius: 50%;
 }
@@ -145,6 +156,7 @@ main {
 .Browser {
   width: 83%;
   background-color: honeydew;
+  margin: 0px auto 0px auto;
   height: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,6 +165,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: rgba(244, 44, 44, 0.7);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -160,19 +175,14 @@ main {
 }
 
 .Pedal {
-  background-color: #912f6c;
   margin: .3em 1em;
   padding: .5em;
-  width: 130px;
+  width: 200px;
   height: 250px;
 }
 
 .Pedal :hover {
   cursor: pointer;
-}
-
-.Pedal__title {
-  color: white;
 }
 
 .Pedal--onBoard {

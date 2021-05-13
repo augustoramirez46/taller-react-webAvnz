@@ -1,22 +1,14 @@
 .Pedal {
-    $red: random(256)-1;
-    $green: random(256)-1;
-    $blue: random(256)-1;
-
-    background-color: rgb($red, $green, $blue);
 
     margin: .3em 1em;
     padding: .5em;
-    width: 130px;
+    width: 200px;
     height: 250px;
 
     :hover {
         cursor: pointer;
     }
 
-    &__title {
-        color: white;
-    }
 
     &--onBoard {
         margin: 3em 6em;

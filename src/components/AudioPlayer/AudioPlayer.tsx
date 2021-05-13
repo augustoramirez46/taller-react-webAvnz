@@ -15,57 +15,62 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ sound1, isPlaying }) =
     // Escucha cambios de la variable, no cambia nada
     React.useEffect(() => {
         sound1.disconnect();
+
+        let prev: any = null;
+        pedalsOnBoard.forEach((pedalInfo, index) => {
+            let curr = null;
+            switch (pedalInfo.id) {
+                case 0:
+                default:
+                    curr = new Tone.Distortion(.5);
+                    break;
+                case 1:
+                    curr = new Tone.Chorus({
+                        frequency: undefined,
+                        delayTime: 2.5,
+                        depth: 1
+                    });
+                    break;
+                case 2:
+                    curr = new Tone.Phaser({
+                        frequency: 15,
+                        octaves: 5,
+                        baseFrequency: 1000
+                    });
+                    break;
+                case 3:
+                    curr = new Tone.Reverb({
+                        decay: 3
+                    });
+                    break;
+                case 4:
+                    curr = new Tone.BitCrusher(3);
+                    break;
+                case 5:
+                    curr = new Tone.Vibrato(1, .5);
+                    break;
+
+            }
+
+            if (index === 0) {
+                sound1.connect(curr);
+                prev = curr;
+                console.log('init')
+            }
+            if (index > 0) {
+                prev = prev.connect(curr);
+                console.log('middle')
+            }
+            if (index === pedalsOnBoard.length - 1) {
+                curr = curr.toDestination();
+                console.log('last')
+            }
+        });
         if (pedalsOnBoard.length === 0) {
             sound1.toDestination();
             return;
         }
-
-        if (pedalsOnBoard.length === 1) {
-            const dist = new Tone.Distortion(1).toDestination();
-            sound1.connect(dist);
-            return;
-        }
-
-        if (pedalsOnBoard.length === 2) {
-            const wahWah = new Tone.AutoWah(50, 6, -5).toDestination();
-            wahWah.Q.value = 8;
-            sound1.connect(wahWah);
-            return;
-        }
-
-        if (pedalsOnBoard.length === 3) {
-            const chorus = new Tone.Chorus(4, 2.5, 0.5).toDestination();
-            sound1.connect(chorus);
-            return;
-        }
-
-        if (pedalsOnBoard.length === 4) {
-
-            const phaser = new Tone.Phaser({
-                frequency: 15,
-                octaves: 5,
-                baseFrequency: 1000
-            }).toDestination();
-            sound1.connect(phaser);
-            return;
-        }
-
-        if (pedalsOnBoard.length === 5) {
-
-            const reverb = new Tone.Reverb({
-                decay: 3
-            }).toDestination();
-            sound1.connect(reverb);
-            return;
-        }
-
-        if (pedalsOnBoard.length === 6) {
-
-            const crusher = new Tone.BitCrusher(3).toDestination();
-            sound1.connect(crusher);
-            return;
-        }
-
+        return;
 
     }, [sound1, pedalsOnBoard]);
 

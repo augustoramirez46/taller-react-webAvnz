@@ -29,7 +29,7 @@ export const PriceSum: React.FC<PriceSumProps> = ({ priceSum }) => {
             </PriceListItem>
         })}
 
-        <p>{`Total: ${priceSum}`}</p>
+        <p className={'PriceSum__total'}>{` $ ${priceSum}`}</p>
 
 
     </div>);

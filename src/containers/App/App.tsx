@@ -15,34 +15,40 @@ const PUBLIC_URL = process.env.PUBLIC_URL;
 const testPedals = [
     {
         id: 0,
-        name: 'siracha',
+        name: 'Boss Distortion',
         price: 35,
+        url: `${PUBLIC_URL}/resources/images/pedals/Distortion.png`
     },
     {
         id: 1,
-        name: 'bigfuff',
-        price: 56
+        name: 'Boss Tremolo',
+        price: 56,
+        url: `${PUBLIC_URL}/resources/images/pedals/Tremolo.png`
     },
     {
         id: 2,
-        name: 'metalarea',
+        name: 'Boss Phaser',
         price: 44,
+        url: `${PUBLIC_URL}/resources/images/pedals/Phaser.png`
     },
     {
         id: 3,
-        name: 'flumes',
-        price: 10
+        name: 'Boss Reverb',
+        price: 10,
+        url: `${PUBLIC_URL}/resources/images/pedals/DigitalDelay.png`
     },
     {
         id: 4,
-        name: 'la sonora',
-        price: 13
+        name: 'Boss MetalZone',
+        price: 13,
+        url: `${PUBLIC_URL}/resources/images/pedals/MetalZone.png`
     },
     {
         id: 5,
-        name: 'voodoo',
-        price: 16
-    },
+        name: 'Boss Flanger',
+        price: 16,
+        url: `${PUBLIC_URL}/resources/images/pedals/Flanger.png`,
+    } /*,
     {
         id: 6,
         name: 'apretadito',
@@ -58,6 +64,7 @@ const testPedals = [
         name: 'el mayor',
         price: 6
     },
+    */
 ];
 
 const mainBg = {
@@ -65,6 +72,8 @@ const mainBg = {
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
 }
+
+
 
 const pedalOnBoard = new Array<PedalInfo>();
 

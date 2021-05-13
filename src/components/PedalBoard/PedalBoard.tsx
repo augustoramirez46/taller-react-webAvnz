@@ -18,7 +18,7 @@ export const PedalBoard: React.FC<PedalBoardProps> = ({ onClickPP }) => {
     return (
         <div className={`PedalBoard`}>
             <div className={`PedalBoard__main`} >
-                {pedalsOnBoard.map(({ id, name, price }) => {
+                {pedalsOnBoard.map(({ id, name, price, url }) => {
                     const IntermediateOnClickPedal = () => {
                         handleToStock(id);
                     }
@@ -28,6 +28,7 @@ export const PedalBoard: React.FC<PedalBoardProps> = ({ onClickPP }) => {
                         onClickPedal={IntermediateOnClickPedal}
                         key={id}
                         id={id}
+                        url={url}
                         name={name}
                         price={price} >
 

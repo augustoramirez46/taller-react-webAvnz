@@ -12,7 +12,7 @@ export const Browser: React.FC<BrowserProps> = () => {
 
 
     return <div className='Browser'>
-        {pedalsOnStock.map(({ id, name, price }) => {
+        {pedalsOnStock.map(({ id, name, price, url }) => {
             const IntermediatePedalDragEnd = () => {
                 handleToBoard(id);
             }
@@ -23,6 +23,7 @@ export const Browser: React.FC<BrowserProps> = () => {
                     key={id}
                     id={id}
                     name={name}
+                    url={url}
                     price={price} >
 
                 </Pedal>

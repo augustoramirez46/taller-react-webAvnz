@@ -5,20 +5,25 @@ interface PedalProps {
     name: string,
     price: number,
     onBoard: boolean,
+    url?: string,
     onClickPedal: () => void;
 }
 
-let pedalStyle = {};
 
-export const Pedal: React.FC<PedalProps> = ({ name, id, onClickPedal, onBoard }) => {
+
+export const Pedal: React.FC<PedalProps> = ({ url, onClickPedal, onBoard }) => {
+    const pedalStyle = {
+        backgroundImage: `url(${url})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "200px",
+        backgroundPosition: "33%"
+    }
 
 
     return (
-        <div className={`Pedal ${onBoard ? `Pedal--onBoard` : ""}`} onClick={onClickPedal} style={pedalStyle} >
-            <p className={`Pedal__id`}>{id}</p>
-            <p className={`Pedal__title`}>{name}</p>
-        </div>
+        <div className={`Pedal ${onBoard ? `Pedal--onBoard` : ""}`} onClick={onClickPedal} style={url ? pedalStyle : undefined} >
 
+        </div>
     )
 
 }
