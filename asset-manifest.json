@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/taller-react-webAvnz/static/css/main.1111a72f.chunk.css",
-    "main.js": "/taller-react-webAvnz/static/js/main.5d87751f.chunk.js",
-    "main.js.map": "/taller-react-webAvnz/static/js/main.5d87751f.chunk.js.map",
+    "main.js": "/taller-react-webAvnz/static/js/main.10d39d15.chunk.js",
+    "main.js.map": "/taller-react-webAvnz/static/js/main.10d39d15.chunk.js.map",
     "runtime-main.js": "/taller-react-webAvnz/static/js/runtime-main.78ad289e.js",
     "runtime-main.js.map": "/taller-react-webAvnz/static/js/runtime-main.78ad289e.js.map",
     "static/js/2.75bb5b56.chunk.js": "/taller-react-webAvnz/static/js/2.75bb5b56.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.78ad289e.js",
     "static/js/2.75bb5b56.chunk.js",
     "static/css/main.1111a72f.chunk.css",
-    "static/js/main.5d87751f.chunk.js"
+    "static/js/main.10d39d15.chunk.js"
   ]
 }
