@@ -6,6 +6,8 @@ interface PlayAudioProps {
 
 }
 
+var play = false;
+
 export const PlayAudio: React.FC<PlayAudioProps> = ({ onClickPP }) => {
 
     const images = [
@@ -22,14 +24,17 @@ export const PlayAudio: React.FC<PlayAudioProps> = ({ onClickPP }) => {
 
     const handleOnClick = () => {
         onClickPP();
-        var copy = bgImage;
-        if (copy === images[0]) {
+        var copy;
+        if (play === false) {
             copy = images[1];
+            play = true;
             SetBgImage(copy);
             return;
         }
         copy = images[0];
+        play = false;
         SetBgImage(copy);
+        return;
     }
 
     return (
