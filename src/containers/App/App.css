@@ -182,10 +182,14 @@ main {
   padding: .5em;
   width: 200px;
   height: 250px;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
 }
 
-.Pedal :hover {
+.Pedal:hover {
   cursor: pointer;
+  width: 215px;
+  height: 265px;
 }
 
 .Pedal--onBoard {

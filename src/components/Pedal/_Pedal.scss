@@ -5,8 +5,12 @@
     width: 200px;
     height: 250px;
 
-    :hover {
+    transition: all .3s ease-out;
+
+    &:hover {
         cursor: pointer;
+        width: 215px;
+        height: 265px;
     }
 
 

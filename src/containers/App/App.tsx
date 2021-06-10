@@ -34,19 +34,19 @@ const testPedals = [
     {
         id: 3,
         name: 'Boss Reverb',
-        price: 10,
+        price: 75,
         url: `${PUBLIC_URL}/resources/images/pedals/DigitalDelay.png`
     },
     {
         id: 4,
         name: 'Boss MetalZone',
-        price: 13,
+        price: 35,
         url: `${PUBLIC_URL}/resources/images/pedals/MetalZone.png`
     },
     {
         id: 5,
         name: 'Boss Flanger',
-        price: 16,
+        price: 80,
         url: `${PUBLIC_URL}/resources/images/pedals/Flanger.png`,
     } /*,
     {
